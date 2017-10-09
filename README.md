@@ -37,13 +37,17 @@ Bellow are the samples of the messages processed and transmitted on uWebSocketIO
 
 ## Running OUTPUT
 
-Final RMSE out as Bellow
+Final RMSE output as Bellow
 
     42["estimate_marker",{"estimate_x":-7.23245983073131,"estimate_y":10.8959188865611,"rmse_vx":0.451266739945118,"rmse_vy":0.43993508070814,"rmse_x":0.097317778752952,"rmse_y":0.0854597168623381}]
 
 The simulator screenshot as bellow:
 
   ![simulator][simulator]
+
+  The RMS output meets the requirements which is as bellow
+
+    px, py, vx, vy output coordinates must have an RMSE <= [.11, .11, 0.52, 0.52]
 
 # Program IDE setup and Build
 
@@ -55,7 +59,7 @@ The simulator screenshot as bellow:
   5. ./ExtendedKF
 
   I use XCode as develop environment, more details about how to setup is referred from bellow link
-   [here](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/f758c44c-5e40-4e01-93b5-1a82aa4e044f/concepts/7d235103-5c4d-4001-a227-5ad2ac43bfff)
+   [here](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project/tree/master/ide_profiles/xcode)
 
 ## Screenshot of the XCode IDE
 
