@@ -47,6 +47,10 @@ int main()
     {
 
       auto s = hasData(std::string(data));
+        
+
+        
+        
       if (s != "") {
       	
         auto j = json::parse(s);
@@ -55,7 +59,8 @@ int main()
         
         if (event == "telemetry") {
           // j[1] is the data JSON object
-          
+         std::cout << s << std::endl;
+            
           string sensor_measurment = j[1]["sensor_measurement"];
           
           MeasurementPackage meas_package;
@@ -134,7 +139,7 @@ int main()
           msgJson["rmse_vx"] = RMSE(2);
           msgJson["rmse_vy"] = RMSE(3);
           auto msg = "42[\"estimate_marker\"," + msgJson.dump() + "]";
-          // std::cout << msg << std::endl;
+          std::cout << msg << std::endl;
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
 	  
         }
